@@ -1,0 +1,145 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#090909;
+}
+
+.loading-box{
+text-align:center;
+color:white;
+}
+
+.panda{
+width:150px;
+margin-bottom:20px;
+filter:drop-shadow(0 0 12px rgba(123,18,32,.8));
+}
+
+h2{
+margin-bottom:10px;
+color:#ffe7e7;
+text-shadow:
+0 0 8px #8b1d2d,
+0 0 18px #5c0d14;
+}
+
+p{
+margin-bottom:20px;
+color:#d8bcbc;
+}
+
+.progress{
+width:320px;
+height:12px;
+background:#1a0508;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #7b1220;
+}
+
+.progress-bar{
+width:0%;
+height:100%;
+background:linear-gradient(90deg,#5d0d16,#8b1d2d,#b32030);
+box-shadow:
+0 0 10px rgba(139,29,45,.8),
+0 0 20px rgba(123,18,32,.8);
+animation:loading 4s linear forwards;
+}
+
+/* ==========================
+        LOCK SCREEN MOBILE
+========================== */
+
+@media (max-width:768px){
+
+#page-index .container{
+    width:95% !important;
+    max-width:360px;
+    margin:auto;
+    padding:20px;
+}
+
+#page-index .profile{
+    width:95px !important;
+    height:95px !important;
+}
+
+#page-index h1{
+    font-size:28px !important;
+    letter-spacing:2px !important;
+}
+
+#page-index p{
+    font-size:15px !important;
+}
+
+#page-index input{
+    width:170px !important;
+    height:42px !important;
+    font-size:22px !important;
+}
+
+#page-index .keypad{
+    grid-template-columns:repeat(3,65px) !important;
+    gap:12px !important;
+}
+
+#page-index .keypad button{
+    width:60px !important;
+    height:60px !important;
+    font-size:20px !important;
+}
+
+#page-index .popup-card{
+    width:92% !important;
+    max-width:320px;
+}
+
+#page-index .popup-image{
+    height:300px !important;
+}
+
+}
+
+@media (max-width:480px){
+
+#page-index .profile{
+    width:85px !important;
+    height:85px !important;
+}
+
+#page-index h1{
+    font-size:24px !important;
+}
+
+#page-index input{
+    width:150px !important;
+    font-size:20px !important;
+}
+
+#page-index .keypad{
+    grid-template-columns:repeat(3,55px) !important;
+    gap:10px !important;
+}
+
+#page-index .keypad button{
+    width:52px !important;
+    height:52px !important;
+    font-size:18px !important;
+}
+
+#page-index .popup-image{
+    height:240px !important;
+}
+
+}

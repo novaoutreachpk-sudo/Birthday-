@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Georgia, serif;
+}
+
+body{
+    background:#090909;
+    background-image:radial-gradient(circle at top,#2b080d 0%,#090909 60%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    width:430px;
+    background:#1a0508;
+    border:2px solid #7b1220;
+    border-radius:25px;
+    padding:30px;
+    color:white;
+    text-align:center;
+    box-shadow:
+    0 0 15px #7b1220,
+    0 0 35px #5c0d14;
+    animation: zoom .5s ease;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:18px;
+    border:none;
+    background:none;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+
+h1{
+    color:#ffe7e7;
+    letter-spacing:2px;
+    margin-bottom:5px;
+    text-shadow:
+    0 0 8px #8b1d2d,
+    0 0 18px #5c0d14;
+}
+
+.small-text{
+    color:#d8bcbc;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.message{
+    background:#170607;
+    padding:20px;
+    border-radius:15px;
+    text-align:left;
+    line-height:1.8;
+    max-height:320px;
+    overflow:auto;
+    border:1px solid #7b1220;
+}
+
+.message h2{
+    color:#ffe7e7;
+    margin-bottom:15px;
+}
+
+.message p{
+    color:#d8bcbc;
+    font-size:16px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:25px;
+}
+
+.buttons button{
+    width:48%;
+    padding:13px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.celebrate{
+    background:#5d0d16;
+    color:white;
+    box-shadow:
+    0 0 10px #7b1220,
+    0 0 25px #5c0d14;
+    display: block;
+    padding:12px 30px;
+}
+
+.celebrate:hover{
+    background:#7b1220;
+    box-shadow:
+    0 0 20px #8b1d2d,
+    0 0 35px #5c0d14;
+}
+
+/* =====================================
+        MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width:768px){
+
+body{
+    display:block;
+    min-height:100vh;
+    padding:20px 12px;
+    overflow:auto;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    padding:15px 0;
+}
+
+.card{
+    width:100%;
+    max-width:390px;
+    padding:22px;
+    border-radius:18px;
+    position:relative;
+    margin:auto;
+}
+
+.close-btn{
+    top:12px;
+    right:14px;
+    font-size:22px;
+}
+
+h1{
+    font-size:28px;
+}
+
+.small-text{
+    font-size:15px;
+}
+
+.message{
+    max-height:320px;
+    padding:16px;
+}
+
+.message h2{
+    font-size:22px;
+}
+
+.message p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+.buttons button{
+    width:100%;
+    max-width:220px;
+}
+
+}
+
+
+@media (max-width:480px){
+
+body{
+    padding:15px 10px;
+}
+
+.card{
+    padding:18px;
+}
+
+h1{
+    font-size:23px;
+}
+
+.small-text{
+    font-size:13px;
+}
+
+.message{
+    max-height:260px;
+    padding:14px;
+}
+
+.message h2{
+    font-size:18px;
+}
+
+.message p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+.buttons button{
+    font-size:15px;
+}
+
+}

@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#090909;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.card{
+    width:380px;
+    padding:35px;
+    text-align:center;
+    background:rgba(20,8,10,.95);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    border:1px solid #7b1220;
+    box-shadow:0 0 30px rgba(123,18,32,.6);
+}
+
+.image{
+    width:180px;
+    margin-bottom:20px;
+    filter:drop-shadow(0 0 15px rgba(123,18,32,.8));
+}
+
+h1{
+    color:#ffe7e7;
+    margin-bottom:15px;
+    text-shadow:
+    0 0 8px #8b1d2d,
+    0 0 18px #5c0d14;
+}
+
+p{
+    color:#d8bcbc;
+    line-height:28px;
+    margin-bottom:25px;
+}
+
+button{
+    width:180px;
+    height:48px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(to right,#5d0d16,#7b1220);
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:
+    0 0 12px rgba(139,29,45,.6);
+    transition:.3s;
+}
+
+button:hover{
+    background:linear-gradient(to right,#7b1220,#b32030);
+    box-shadow:
+    0 0 18px rgba(180,30,50,.8),
+    0 0 30px rgba(120,15,25,.8);
+}
+
+/* =====================================
+        MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width:768px){
+
+body{
+    display:block;
+    min-height:100vh;
+    padding:20px 15px;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:100%;
+    max-width:380px;
+    padding:25px 20px;
+    border-radius:20px;
+}
+
+.image{
+    width:150px;
+    margin-bottom:18px;
+}
+
+h1{
+    font-size:28px;
+    line-height:1.4;
+}
+
+p{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:22px;
+}
+
+button{
+    width:100%;
+    max-width:220px;
+    height:50px;
+    font-size:17px;
+}
+
+}
+
+
+@media (max-width:480px){
+
+body{
+    padding:15px 10px;
+}
+
+.card{
+    padding:20px 16px;
+    border-radius:18px;
+}
+
+.image{
+    width:120px;
+}
+
+h1{
+    font-size:23px;
+}
+
+p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+button{
+    width:100%;
+    font-size:16px;
+}
+
+}

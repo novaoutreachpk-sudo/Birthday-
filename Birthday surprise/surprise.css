@@ -1,0 +1,268 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#090909;
+    color:white;
+    min-height:100vh;
+    padding:30px;
+    overflow-x:hidden;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+h1{
+    color:#ffe7e7;
+    font-size:45px;
+    letter-spacing:3px;
+    text-shadow:
+    0 0 10px #8b1d2d,
+    0 0 20px #5c0d14;
+}
+
+p{
+    color:#d8bcbc;
+    margin:15px 0 35px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#170607;
+    border:2px solid #8b1d2d;
+    border-radius:18px;
+    min-height:170px;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:
+    0 0 10px rgba(160,25,40,.6),
+    0 0 25px rgba(120,15,25,.5);
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.05);
+    box-shadow:
+    0 0 15px #ff3b5c,
+    0 0 35px #8b1d2d;
+}
+
+.question{
+    font-size:60px;
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+.message{
+    display:none;
+    font-size:18px;
+    color:white;
+    line-height:1.6;
+}
+
+.card.active .question{
+    display:none;
+}
+
+.card.active .message{
+    display:block;
+}
+
+button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    border-radius:35px;
+    background:#8b1d2d;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(160,25,40,.8);
+}
+
+button:hover{
+    background:#a01928;
+    transform:scale(1.08);
+}
+
+/* Floating Hearts */
+
+.hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-80px;
+    font-size:28px;
+    animation:floatHeart 12s linear infinite;
+}
+
+.hearts span:nth-child(1){left:5%;animation-duration:8s;}
+.hearts span:nth-child(2){left:18%;animation-duration:10s;}
+.hearts span:nth-child(3){left:32%;animation-duration:9s;}
+.hearts span:nth-child(4){left:47%;animation-duration:11s;}
+.hearts span:nth-child(5){left:60%;animation-duration:8s;}
+.hearts span:nth-child(6){left:73%;animation-duration:10s;}
+.hearts span:nth-child(7){left:85%;animation-duration:9s;}
+.hearts span:nth-child(8){left:95%;animation-duration:12s;}
+
+@keyframes floatHeart{
+
+0%{
+transform:translateY(0) scale(.8);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-110vh) scale(1.4);
+opacity:0;
+}
+
+}
+
+@media(max-width:768px){
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+h1{
+font-size:32px;
+}
+
+}
+
+@media(max-width:500px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+}
+
+/* =====================================
+        EXTRA MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width:768px){
+
+body{
+    padding:20px 15px;
+}
+
+.container{
+    width:100%;
+    max-width:450px;
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.card{
+    min-height:150px;
+    padding:16px;
+}
+
+.question{
+    font-size:48px;
+}
+
+.message{
+    font-size:15px;
+    line-height:1.5;
+}
+
+button{
+    width:100%;
+    max-width:240px;
+    padding:14px;
+    font-size:17px;
+}
+
+.hearts span{
+    font-size:22px;
+}
+
+}
+
+@media (max-width:480px){
+
+body{
+    padding:15px 10px;
+}
+
+.container{
+    width:100%;
+}
+
+h1{
+    font-size:24px;
+    letter-spacing:1px;
+    line-height:1.4;
+}
+
+p{
+    font-size:15px;
+    margin:12px 0 25px;
+}
+
+.cards{
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.card{
+    min-height:130px;
+    padding:15px;
+}
+
+.question{
+    font-size:42px;
+}
+
+.message{
+    font-size:14px;
+    line-height:1.6;
+}
+
+button{
+    width:100%;
+    font-size:16px;
+}
+
+.hearts span{
+    font-size:18px;
+}
+
+}

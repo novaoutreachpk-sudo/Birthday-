@@ -1,0 +1,235 @@
+/* Popup Box */
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#090909;
+}
+
+.popup-content{
+    width:320px;
+    max-width:85%;
+    background:rgba(20,8,10,.95);
+    border:2px solid #7b1220;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    position:relative;
+    color:white;
+    box-shadow:0 0 25px rgba(123,18,32,.6);
+    animation:popup .5s ease;
+}
+
+/* Animation */
+@keyframes popup{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* Close Button */
+.close-btn{
+    position:absolute;
+    top:10px;
+    right:15px;
+    background:none;
+    border:none;
+    color:#ffe7e7;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.close-btn:hover{
+    color:#b32030;
+}
+
+/* Gift */
+.gift{
+    font-size:55px;
+    animation:bounce 1.5s infinite;
+}
+
+/* Heading */
+.surprise-box h2{
+    margin:15px 0;
+    color:#ffe7e7;
+    font-size:28px;
+    text-shadow:
+        0 0 8px #8b1d2d,
+        0 0 18px #5c0d14;
+}
+
+/* Quote */
+.quote{
+    font-size:18px;
+    line-height:1.8;
+    color:#d8bcbc;
+    margin-top:15px;
+    padding:0 10px;
+}
+
+/* Hearts */
+.hearts{
+    margin-top:20px;
+    font-size:28px;
+    color:#b32030;
+    animation:heart 1.5s infinite;
+}
+
+/* PASSKEY */
+.popup-content h3{
+    margin:20px 0;
+    color:#f3dada;
+    letter-spacing:3px;
+}
+
+/* Continue Button */
+.continue-btn{
+    background:#5d0d16;
+    color:white;
+    border:1px solid #8b1d2d;
+    padding:12px 35px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 0 12px rgba(139,29,45,.6);
+}
+
+.continue-btn:hover{
+    background:#7b1220;
+    box-shadow:
+        0 0 15px rgba(180,30,50,.8),
+        0 0 30px rgba(120,15,25,.8);
+}
+
+/* Gift Bounce */
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* Hearts Animation */
+@keyframes heart{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+hr{
+    border:1px solid rgba(139,29,45,.4);
+    margin:20px 0;
+}
+
+/* =====================================
+        MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width:768px){
+
+body{
+    display:block;
+    padding:20px 12px;
+}
+
+.popup-content{
+    width:100%;
+    max-width:380px;
+    padding:18px;
+    margin:auto;
+}
+
+.close-btn{
+    font-size:26px;
+    top:8px;
+    right:10px;
+}
+
+.gift{
+    font-size:48px;
+}
+
+.surprise-box h2{
+    font-size:24px;
+    line-height:1.4;
+}
+
+.quote{
+    font-size:16px;
+    line-height:1.7;
+    padding:0;
+}
+
+.hearts{
+    font-size:24px;
+}
+
+.popup-content h3{
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.continue-btn{
+    width:100%;
+    max-width:240px;
+    padding:14px;
+    font-size:17px;
+}
+
+}
+
+
+@media (max-width:480px){
+
+body{
+    padding:15px 10px;
+}
+
+.popup-content{
+    max-width:100%;
+    border-radius:16px;
+    padding:15px;
+}
+
+.gift{
+    font-size:42px;
+}
+
+.surprise-box h2{
+    font-size:21px;
+}
+
+.quote{
+    font-size:15px;
+    line-height:1.6;
+}
+
+.hearts{
+    font-size:22px;
+}
+
+.popup-content h3{
+    font-size:16px;
+}
+
+.continue-btn{
+    width:100%;
+    font-size:16px;
+    padding:13px;
+}
+
+}

@@ -1,0 +1,300 @@
+\*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#090909;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:340px;
+    text-align:center;
+}
+
+.profile{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #7b1220;
+    cursor:pointer;
+    display:block;
+    margin:20px auto;
+    transition:.3s;
+    box-shadow:
+    0 0 10px rgba(160,25,40,.6),
+    0 0 25px rgba(120,15,25,.8);
+}
+
+.profile:hover{
+    transform:scale(1.05);
+}
+
+h1{
+    color:#ffe7e7;
+    margin-top:15px;
+    letter-spacing:4px;
+    text-shadow:
+    0 0 8px #8b1d2d,
+    0 0 18px #5c0d14;
+}
+
+p{
+    color:#d8bcbc;
+    margin:12px 0;
+}
+
+input{
+    width:180px;
+    height:45px;
+    background:#170607;
+    border:1px solid #8b1d2d;
+    border-radius:10px;
+    color:#fff;
+    font-size:25px;
+    text-align:center;
+    margin:20px auto;
+    display:block;
+    outline:none;
+}
+
+.keypad{
+    display:grid;
+    grid-template-columns:repeat(3,80px);
+    gap:20px;
+    justify-content:center;
+}
+
+.keypad button{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:1px solid #8b1d2d;
+    background:#1a0508;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:
+    0 0 10px rgba(160,25,40,.4);
+}
+
+.keypad button:hover{
+    background:#8b1d2d;
+    transform:scale(1.08);
+}
+
+/* Popup */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    visibility:hidden;
+    opacity:0;
+    transition:.4s;
+}
+
+.popup.show{
+    visibility:visible;
+    opacity:1;
+}
+
+.popup-card{
+    width:320px;
+    background:#170607;
+    border:2px solid #8b1d2d;
+    border-radius:18px;
+    padding:15px;
+    text-align:center;
+    position:relative;
+    transform:scale(.8);
+    transition:.4s;
+    box-shadow:
+    0 0 10px rgba(160,25,40,.6),
+    0 0 25px rgba(120,15,25,.8);
+}
+
+.popup.show .popup-card{
+    transform:scale(1);
+}
+
+.popup-image{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.popup-text h2{
+    color:#ffe7e7;
+    margin-top:15px;
+    text-shadow:
+    0 0 8px #8b1d2d,
+    0 0 18px #5c0d14;
+}
+
+.popup-text p{
+    margin-top:8px;
+    color:#d8bcbc;
+}
+
+.close{
+    position:absolute;
+    top:10px;
+    right:12px;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:#1a0508;
+    border:1px solid #8b1d2d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    color:#fff;
+    font-size:20px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width:768px){
+
+body{
+    display:block;
+    min-height:100vh;
+    padding:25px 15px;
+}
+
+.container{
+    width:100%;
+    max-width:380px;
+    margin:auto;
+}
+
+.profile{
+    width:110px;
+    height:110px;
+}
+
+h1{
+    font-size:30px;
+    letter-spacing:2px;
+}
+
+p{
+    font-size:15px;
+    line-height:1.6;
+}
+
+input{
+    width:100%;
+    max-width:220px;
+    height:50px;
+    font-size:24px;
+}
+
+.keypad{
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    width:100%;
+    max-width:260px;
+    margin:auto;
+}
+
+.keypad button{
+    width:100%;
+    aspect-ratio:1;
+    height:auto;
+    font-size:22px;
+}
+
+.popup{
+    padding:20px;
+}
+
+.popup-card{
+    width:100%;
+    max-width:360px;
+    padding:15px;
+}
+
+.popup-image{
+    width:100%;
+    height:300px;
+}
+
+.popup-text h2{
+    font-size:24px;
+}
+
+.popup-text p{
+    font-size:15px;
+}
+
+.close{
+    width:38px;
+    height:38px;
+    font-size:20px;
+}
+
+}
+
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+body{
+    padding:20px 12px;
+}
+
+.profile{
+    width:95px;
+    height:95px;
+}
+
+h1{
+    font-size:26px;
+}
+
+p{
+    font-size:14px;
+}
+
+input{
+    height:45px;
+    font-size:22px;
+}
+
+.keypad{
+    gap:12px;
+    max-width:240px;
+}
+
+.popup-image{
+    height:250px;
+}
+
+.popup-card{
+    padding:12px;
+}
+
+.popup-text h2{
+    font-size:20px;
+}
+
+}

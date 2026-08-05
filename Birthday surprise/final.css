@@ -1,0 +1,234 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#090909;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+}
+
+h1{
+    color:#ffe7e7;
+    font-size:45px;
+    letter-spacing:4px;
+    text-shadow:
+    0 0 8px #8b1d2d,
+    0 0 18px #5c0d14;
+    margin-bottom:20px;
+}
+
+p{
+    color:#d8bcbc;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.gift{
+    width:180px;
+    height:180px;
+    margin:25px auto;
+    background:#170607;
+    border:2px solid #8b1d2d;
+    border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:90px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:
+    0 0 10px rgba(160,25,40,.6),
+    0 0 25px rgba(120,15,25,.8);
+    animation:giftBeat 1.2s infinite;
+}
+
+.gift:hover{
+    transform:scale(1.08);
+}
+
+#message{
+    display:none;
+    margin-top:30px;
+    padding:25px;
+    background:#170607;
+    border:2px solid #8b1d2d;
+    border-radius:20px;
+    color:white;
+    box-shadow:
+    0 0 10px rgba(160,25,40,.6),
+    0 0 25px rgba(120,15,25,.8);
+}
+
+#message h2{
+    color:#ffe7e7;
+    margin-bottom:15px;
+}
+.floating-hearts{
+    display:none;
+    position:fixed;
+    left:0;
+    bottom:-50px;
+    width:100%;
+    text-align:center;
+    font-size:35px;
+    animation:heartsUp 4s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes heartsUp{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+#message button{
+    background:#ff1744;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+    box-shadow:0 0 15px #ff1744;
+}
+
+#message button:hover{
+    background:#7b1220;
+}
+/* =====================================
+        MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width:768px){
+
+body{
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding:20px 15px;
+}
+
+.container{
+    width:100%;
+    max-width:420px;
+    margin:auto;
+}
+
+h1{
+    font-size:32px;
+    letter-spacing:2px;
+    line-height:1.4;
+}
+
+p{
+    font-size:16px;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.gift{
+    width:150px;
+    height:150px;
+    font-size:75px;
+    border-radius:20px;
+}
+
+#message{
+    padding:20px;
+    margin-top:25px;
+}
+
+#message h2{
+    font-size:24px;
+}
+
+#message p{
+    font-size:15px;
+    line-height:1.8;
+}
+
+#message button{
+    width:100%;
+    max-width:220px;
+    padding:14px;
+    font-size:16px;
+}
+
+.floating-hearts{
+    font-size:28px;
+}
+
+}
+
+@media (max-width:480px){
+
+body{
+    padding:15px 10px;
+}
+
+h1{
+    font-size:25px;
+    letter-spacing:1px;
+}
+
+p{
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.gift{
+    width:120px;
+    height:120px;
+    font-size:60px;
+    border-radius:18px;
+}
+
+#message{
+    padding:16px;
+    border-radius:16px;
+}
+
+#message h2{
+    font-size:20px;
+}
+
+#message p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+#message button{
+    width:100%;
+    font-size:15px;
+}
+
+.floating-hearts{
+    font-size:22px;
+}
+
+}

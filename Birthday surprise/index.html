@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locked ❤️</title>
+
+    <link id="pageStyle" rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+ <audio id="bgMusic" preload="auto" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<section id="page-index">
+
+<div class="container">
+
+    <img src="profile.jpeg" class="profile" id="profilePic">
+
+    <h1>LOCKED</h1>
+
+    <p>Click on profile picture to know passkey ❤️</p>
+
+    <input type="password" id="password" placeholder="••••" readonly>
+
+    <div class="keypad">
+
+        <button onclick="addNumber('1')">1</button>
+        <button onclick="addNumber('2')">2</button>
+        <button onclick="addNumber('3')">3</button>
+
+        <button onclick="addNumber('4')">4</button>
+        <button onclick="addNumber('5')">5</button>
+        <button onclick="addNumber('6')">6</button>
+
+        <button onclick="addNumber('7')">7</button>
+        <button onclick="addNumber('8')">8</button>
+        <button onclick="addNumber('9')">9</button>
+
+        <button onclick="clearPass()">⌫</button>
+        <button onclick="addNumber('0')">0</button>
+        <button onclick="checkPass()">✔</button>
+
+    </div>
+
+</div>
+
+<!-- Popup -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-card">
+
+        <span class="close" onclick="closePopup()">✕</span>
+
+        <img src="profile.jpeg" class="popup-image">
+
+        <div class="popup-text">
+            <h2>PASSKEY = 4393</h2>
+            <p>Enter this passkey to unlock your surprise ❤️</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="page-photo" style="display:none;">
+
+
+<div class="popup-content">
+
+    <button class="close-btn">&times;</button>
+
+    <div class="surprise-box">
+
+        <div class="gift">🎁</div>
+
+        <h2>For Someone Special ❤️</h2>
+
+        <p class="quote">
+            "If I had one wish,<br>
+            it would be to see you smile<br>
+            every single day.<br><br>
+
+            Wishing you endless happiness,<br>
+            beautiful memories,<br>
+            and a lifetime of love.<br><br>
+
+            Happy Birthday! ❤️🎂"
+        </p>
+
+        <div class="hearts">
+            ❤️ 💖 💕 💗 ❤️
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h3>PASSKEY • 4393</h3>
+
+    <button class="continue-btn">
+        Continue ➜
+    </button>
+
+</div>
+
+</section>
+
+<section id="page-loading" style="display:none;">
+
+<div class="loading-box">
+
+    <img src="images/p.jpg" class="panda">
+
+    <h2>Loading something special...</h2>
+
+    <p>Just For You 💖</p>
+
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+</div>
+
+</section>
+
+<section id="page-special" style="display:none;">
+
+<div class="container">
+
+    <div class="card">
+
+        <img src="images/panda.gif" class="image">
+
+        <h1>It's Your Special Day</h1>
+
+        <p>
+            I made something special for you.<br>
+            I hope this little surprise makes<br>
+            your birthday even more beautiful. ❤️
+        </p>
+
+        <button onclick="start()">START</button>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="page-memories" style="display:none;">
+
+<div class="container">
+
+    <img src="images/w.webp" class="emoji">
+
+    <h1>Happy Birthday Meri Muhtarma 🎀</h1>
+
+    <p class="sub">You have completed</p>
+
+    <div class="counter">
+
+        <div class="box">
+            <h2>22</h2>
+            <p>YEARS</p>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="box">
+            <h2>0</h2>
+            <p>MONTHS</p>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="box">
+            <h2>0</h2>
+            <p>DAYS</p>
+        </div>
+
+    </div>
+
+    <button class="btn">
+        NEXT ➜
+        <div class="effects"></div>
+    </button>
+
+</div>
+
+</section>
+
+<section id="page-letter" style="display:none;">
+
+<div class="box">
+
+    <h2>💌 A LETTER JUST FOR YOU</h2>
+
+    <p>Tap the heart to continue...</p>
+
+    <div class="heart" id="heart">❤️</div>
+
+</div>
+
+</section>
+
+<section id="page-celebrate" style="display:none;">
+
+<div class="container">
+
+    <div class="card" id="card">
+
+        <button class="close-btn" onclick="closeCard()">✖</button>
+
+        <h1>JUST FOR YOU ✨</h1>
+
+        <p class="small-text">From my heart to yours ❤️</p>
+
+        <div class="message">
+
+            <h2>Happy birthday Duaa🫀</h2>
+
+            <p>
+               I pray that Allah pak blesses  uh wth all the happiness nd success in ur life. I Hope this year bring uh more joy nd uh get what uh have been praying for.
+Uh r the most beautiful part of my life.
+Uh were special to me uh r special nd uh will always be special.
+No matter what the circumstances r no one can ever take ur place.
+Uh mean more to me than this whole world...more than even my own self. You're my entire heart.I truly can't imagine my life without uhh.
+Having uhh in my life is one of God's biggest blessings nd I'll always thankful for uh.
+Ur smile make my days better nd ur presence makes everything feel special I hope ur birthday is filled wth happiness,love nd endless smile.
+No matter how much time pulls us apart i will always pray to Allah Pak to send uh as my sister in jannah so that I never have to be away from uh again.
+ We met very little in college but just knowing uh were there gave me strength every single day when uh were in front of me I used to feel like no one could ever harm me. Ever since uh came into my life I haven't needed anyone else in this world.
+Will I ever be able to forget you Duaa? I will always remember you. Duaa I miss you so much
+Duaa nowadays people can't even hold onto another person for a single year nd Alhamdulillah i have kept just a single strand of ur hair safe wth me for 1.5 years uh can imagine from this how important uh r to me uh feel like a sister to me duaa uh feel like the reward of some good deed I did when I talk to uh i start feeling so lucky like the whole world is in my hands like I’ve gotten everything 
+Duaa please never leave me yara
+*میں اپنی دعاؤں میں بھی یارا رب سے تیری باتیں کروں🥹♥️*
+Always stay happy------bcz ur happiness means alot to me.🥹🫀
+Once again happiest born day miss duaa Younis abbasi🪄🎀🎊  
+            </p>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="celebrate" onclick="celebrate()">
+                CELEBRATE 🎉
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="page-cake" style="display:none;">
+
+<div class="effects" id="effects"></div>
+
+<div class="container">
+
+    <h1>🎉 Again Happy Birthday My Dear ❤️</h1>
+
+    <p class="subtitle">
+        Today is all about you. 💖<br>
+        May Allah bless you with endless happiness, success,
+        beautiful moments and lots of smiles. ✨
+    </p>
+
+    <div class="cake">
+
+        <div class="candle candle1">
+            <div class="flame"></div>
+        </div>
+
+        <div class="candle candle2">
+            <div class="flame"></div>
+        </div>
+
+        <div class="candle candle3">
+            <div class="flame"></div>
+        </div>
+
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+
+        <div class="plate"></div>
+
+    </div>
+
+    <button id="cutBtn" class="cut-btn">
+        🎂 Cut the Cake
+    </button>
+
+    <div id="finalMessage" class="final-message">
+
+        <h2>🎊 Cake Cut Successfully 🎊</h2>
+
+        <p>
+            Once Again... ❤️<br><br>
+
+            Happy Birthday! 🎂✨<br>
+
+            May every dream come true,
+            every smile stay forever,
+            and every moment of your life
+            be filled with happiness.
+
+            ❤️🎉🥳
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="page-surprise" style="display:none;">
+
+<!-- Floating Hearts -->
+<div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💞</span>
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+</div>
+
+<div class="container">
+
+<h1>💖 Why You're Special 💖</h1>
+
+<p>Click every card to reveal a special message ❤️</p>
+
+<div class="cards">
+
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">❤️ You're my Jind Jaan.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">🕊️ You're the peace in my life; everything else is just noise.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">👑 You're the queen in every way.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">💛 You have a heart of gold.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">💪 Your strength and resilience inspire me.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">✨ You shine brighter than anyone.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">😂 Your laugh is my favorite sound.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">😊 Your smile is my favorite view.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">👀 Your eyes are a beautiful mystery.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">🎵 Your voice is the last limit of my sukoon.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">🤍 If you're with me, I have no grief. But if you're not, that's my greatest grief.</span>
+</div>
+
+<div class="card">
+<span class="question">?</span>
+<span class="message">🌍 Miss Duaa Younis Abbasi, You mean the whole world to me ❤️</span>
+</div>
+
+</div>
+
+<button onclick="nextPage()">
+    Next final Surprise ❤️
+</button>
+
+</div>
+
+</section>
+<section id="page-final" style="display:none;">
+
+<div class="container">
+
+    <h1>🎁 One Last Surprise 🎁</h1>
+
+    <p>Click the Gift Box to Open Your Final Surprise ❤️</p>
+
+    <div class="gift" onclick="openGift()">
+        🎁
+    </div>
+
+    <div class="floating-hearts" id="floatingHearts">
+        ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️
+    </div>
+
+    <div id="message">
+
+        <h2>🌹 Surprise! 🌹</h2>
+
+        <p>
+            The best gift isn't inside this box...
+            <br><br>
+
+            It's the beautiful smile you bring to the world. ❤️
+
+            <br><br>
+
+            Happy Birthday,<br>
+
+            <b>Miss Duaa Younis Abbasi</b><br>
+            <b>10 Aug 2026</b>
+
+        </p>
+
+        <button onclick="restartWebsite()">
+            🔄 Start Again
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+<script src="photo.js"></script>
+<script src="loading.js"></script>
+<script src="special.js"></script>
+<script src="memories.js"></script>
+<script src="letter.js"></script>
+<script src="celebrate.js"></script>
+<script src="cake.js"></script>
+<script src="surprise.js"></script>
+<script src="final.js"></script>
+
+<script src="app.js"></script>
+<script src="music.js"></script>
+
+<link rel="stylesheet" href="responsive.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+
+<script>
+showPage("page-index");
+</script>
+
+</body>
+</html>
